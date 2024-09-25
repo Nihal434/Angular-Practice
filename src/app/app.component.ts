@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyFirstAngularProject';
+
+  obj = {
+    "name":"RAm",
+  }
+  num=90;
+  wantsToDisable = false;
+  wantsToDisable2 = false;
 }
