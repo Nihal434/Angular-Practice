@@ -14,4 +14,45 @@ export class AppComponent {
   num=90;
   wantsToDisable = false;
   wantsToDisable2 = false;
+
+  m1(){
+    console.log("clicked");
+  }
+  mouseOver(){
+    alert("mouse over done");
+  }
+
+  myVal = 20;
+
+  //directives
+  data:any={
+    username:'Ram',
+    password:123
+  }
+
+  numbers:any=[1,2,3,4]
+  students:any=[
+    {
+      id:1,
+      name:"Ram",
+      age:20
+    },
+    {
+      id:2,
+      name:"Ram1",
+      age:20
+    },
+    {
+      id:3,
+      name:"Ram2",
+      age:20
+    }
+  ]
+  color = 'yellow'
+  myColor = 'yellow'
+  isHighlight=false;
+  changeBackground(){
+    this.isHighlight=!this.isHighlight;
+
+  }
 }

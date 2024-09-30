@@ -1,12 +1,67 @@
 
-<h1>hello</h1>
-<!-- interpolation -->
- <h1 style="color: brown;">Interpolation</h1>
-<h3>{{title }} from ts </h3>
-<h4>{{obj}}</h4>
-<input type="text" value="{{num}}" disabled="{{wantsToDisable}}"> 
-<br>
-<br>
-<!-- property binding -->
-<h1 style="color: brown;">Property Binding</h1>
-<input type="text" value="{{num}}" [disabled]=wantsToDisable2>   
+<div class="myDiv">
+  <div class="myDiv-1"><h1>Data Binding</h1>
+    <!-- interpolation -->
+     <h1 style="color: brown;">Interpolation</h1>
+    <h3>{{title }} from ts </h3>
+    <h4>{{obj}}</h4>
+    <input type="text" value="{{num}}" disabled="{{wantsToDisable}}"> 
+    <br>
+    <br>
+    <!-- property binding -->
+    <h1 style="color: brown;">Property Binding</h1>
+    <input type="text" value="{{num}}" [disabled]=wantsToDisable2>   
+    <br>
+    <!-- Event Binding  -->
+    <h1 style="color: brown;">Event Binding</h1>
+    <button (click)="m1()" >click</button>
+    <br>
+    <div>
+      <p (mouseover)="mouseOver()" style="width: 10%;">mouseOver</p>
+    </div>
+    <br>
+    <!-- Two way Binding  -->
+    <h1 style="color: brown;">Two way Binding</h1>
+    <input type="text" [(ngModel)]="myVal">
+    <p>{{myVal}}</p></div>
+  <div class="myDiv-2">
+    <!-- Directives  -->
+    <h1 style="color: brown;">Directives</h1>
+    <h2 style="color: rgb(255, 0, 89);">ngIF Examples</h2>
+    <button *ngIf="data">SignIn</button><br><br>
+    <button *ngIf="!data">SignUp</button>
+    <h2 style="color: rgb(255, 0, 89);">ngFor Examples</h2>
+    <h3>ngFor example 2</h3>
+    <ul *ngFor="let i of numbers">
+      <li>{{i}}</li>
+    </ul>
+    <h3>ngFor example 1</h3>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      <tbody *ngFor="let stud of students">
+        <tr>
+          <td>{{stud.id}}</td>
+          <td>{{stud.name}}</td>
+          <td>{{stud.age}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 style="color: rgb(255, 0, 89);">ngSwitch Examples</h2>
+    <input type="text" [(ngModel)]="myColor">
+    <div [ngSwitch]="myColor">
+      <p *ngSwitchCase="'yellow'">Yellow</p>
+      <p *ngSwitchCase="'Red'">Red</p>
+      <p *ngSwitchDefault>Default color</p>
+    </div>
+    
+  </div>
+  <div class="myDiv-3" [ngClass]="{background:isHighlight}">
+        <!-- Directives  -->
+        <h1 style="color: brown;"> Attributes Directives</h1>
+        <button (click)="changeBackground()">ON/OFF</button>
+  </div>
+</div>

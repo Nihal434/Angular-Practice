@@ -1,0 +1,26 @@
+.myDiv{
+    display: flex;
+    gap: 2%;
+}
+.myDiv-1{
+    padding: 1%;
+    width: 30%;
+    height: 100%;
+    border: 2px solid black;
+}
+.myDiv-2{
+    padding: 1%;
+    width: 30%;
+    height: 100%;
+    border: 2px solid black;
+}
+.myDiv-3{
+    padding: 1%;
+    width: 30%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.background{
+    background-color: aqua;
+}
