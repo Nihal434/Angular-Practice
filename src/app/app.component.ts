@@ -55,4 +55,22 @@ export class AppComponent {
     this.isHighlight=!this.isHighlight;
 
   }
+
+  pointer = 0
+  up(){
+    this.pointer+=1;
+  }
+  down(){
+    if(this.pointer>0){
+      this.pointer-=1;
+    }
+  }
+
+  fontSize='20px';
+  increaseFont(){
+    this.fontSize = (parseInt(this.fontSize)+2) + 'px';
+  }
+  decreaseFont(){
+    this.fontSize = (parseInt(this.fontSize)-2) + 'px';
+  }
 }
